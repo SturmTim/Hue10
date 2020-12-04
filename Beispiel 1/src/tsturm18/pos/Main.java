@@ -16,14 +16,14 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        PasswordFinder pf = new PasswordFinder("password0");
-        System.out.println("Passwort 0: " + pf.find());
+//        PasswordFinder pf = new PasswordFinder("password0");
+//        System.out.println("Passwort 0: " + pf.find());
 //        PasswordFinder pf = new PasswordFinder("password1");
 //        System.out.println("Passwort 1: " + pf.find());
 //        PasswordFinder pf = new PasswordFinder("password2");
 //        System.out.println("Passwort 2: " + pf.find());
-        WebPasswordFinder wpf = new WebPasswordFinder("password3");
-        System.out.println("Passwort 3: " + wpf.find());
+//        WebPasswordFinder wpf = new WebPasswordFinder("password3");
+//        System.out.println("Passwort 3: " + wpf.find());
     }
 
 }

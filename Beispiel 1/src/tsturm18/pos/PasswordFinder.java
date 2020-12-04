@@ -28,7 +28,7 @@ public class PasswordFinder {
         String lines = "";
         try {
             lines = Files.lines(new File("passwords/" + file).toPath())
-                    .reduce((string1, string2) -> string1 + "\n" + string2)
+                    .reduce((string1, string2) -> string1 + string2)
                     .orElse("");
         } catch (IOException e) {
             System.out.println("IOException in Constructor");
@@ -132,7 +132,12 @@ public class PasswordFinder {
                     if (index == 0) {
                         return null;
                     } else {
-                        chars[index] = 48;
+                        if (!file.equals("password0")) {
+                            chars[index] = 48;
+                        } else {
+                            chars[index] = 97;
+                        }
+
                         return next(chars, index - 1);
                     }
                 default:
